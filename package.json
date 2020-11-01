@@ -16,5 +16,8 @@
     "log",
     "node",
     "typescript"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^3.9"
+  }
 }
