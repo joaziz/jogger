@@ -14,7 +14,7 @@ export const LogLevels = {
 }
 
 
-interface ILogger {
+export interface ILogger {
     setHandlers(handlers: Array<IHandler>): void;
 
     pushHandler(handler: IHandler): void;
@@ -37,7 +37,7 @@ interface ILogger {
 }
 
 
-class Logger implements ILogger {
+export class Logger implements ILogger {
     private readonly _channel: string;
     private handlers: Array<IHandler> = [];
 
@@ -104,7 +104,7 @@ class Logger implements ILogger {
 }
 
 
-interface LoggerList<T extends ILogger> {
+export interface LoggerList<T extends ILogger> {
     [key: string]: T;
 }
 
